@@ -92,3 +92,16 @@ const PERIODIZATION = {
     0: { type: 'rest',  label: 'Rest Day'            }
   }
 };
+
+const BEVERAGES = [
+  { name: 'Kopi-O',          cal:  80, protein: 0, rating: '☕' },
+  { name: 'Kopi (w milk)',   cal: 130, protein: 3, rating: '☕' },
+  { name: 'Teh-O',           cal:  70, protein: 0, rating: '🍵' },
+  { name: 'Teh Tarik',       cal: 150, protein: 4, rating: '🍵' },
+  { name: '100 Plus',        cal:  70, protein: 0, rating: '🥤' },
+  { name: 'Milo (hot)',      cal: 120, protein: 3, rating: '🥛' },
+  { name: 'Coconut Water',   cal:  60, protein: 1, rating: '🥥' },
+  { name: 'Protein Shake',   cal: 130, protein:25, rating: '💪' },
+  { name: 'Water',           cal:   0, protein: 0, rating: '💧' },
+  { name: 'Soy Milk',        cal: 100, protein: 7, rating: '🥛' },
+];
