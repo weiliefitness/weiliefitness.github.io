@@ -11,12 +11,12 @@
   --border:#252535;--border2:#2a2a3a;
   --text:#e8e8f0;--muted:#6b6b80;--dim:#9090a8;
   --green:#00e87a;--blue:#4d9fff;--yellow:#f5c842;--red:#ff4545;--orange:#ff6b35;
-  --fd:'Syne',sans-serif;--fm:'Space Mono',monospace;--fb:'DM Sans',sans-serif;
+  --fd:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif;--fm:'Space Mono',monospace;--fb:-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif;
   --r:12px;--r-sm:8px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:14px;line-height:1.6;min-height:100vh}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.65;min-height:100vh}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:54px}
 .logo{font-family:var(--fd);font-weight:800;font-size:16px;color:var(--green);letter-spacing:.06em;text-decoration:none}
@@ -39,8 +39,8 @@ main{margin-top:54px;padding:20px;max-width:1440px;margin-left:auto;margin-right
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:18px;position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent)}
-.ct{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.cv{font-family:var(--fd);font-size:32px;font-weight:800;line-height:1}
+.ct{font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.cv{font-family:var(--fd);font-size:34px;font-weight:700;line-height:1}
 .cu{font-family:var(--fm);font-size:10px;color:var(--muted);margin-top:4px}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
 .st{font-family:var(--fd);font-size:22px;font-weight:700}
@@ -72,22 +72,22 @@ main{margin-top:54px;padding:20px;max-width:1440px;margin-left:auto;margin-right
 .ring-lbl{font-family:var(--fm);font-size:8px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
 /* HOME */
 .hero{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;padding:20px;background:linear-gradient(135deg,rgba(0,232,122,.04),transparent 60%),var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:14px}
-.hero-title{font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:4px}
+.hero-title{font-family:var(--fd);font-size:20px;font-weight:700;margin-bottom:4px}
 .hero-sub{font-size:12px;color:var(--muted);line-height:1.5}
 .metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
 .metric-tile{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
 .metric-icon{font-size:20px;display:block;margin-bottom:5px}
-.metric-val{font-family:var(--fd);font-size:24px;font-weight:800;line-height:1}
+.metric-val{font-family:var(--fd);font-size:28px;font-weight:700;line-height:1}
 .metric-lbl{font-family:var(--fm);font-size:8px;color:var(--muted);letter-spacing:.07em;text-transform:uppercase;margin-top:3px}
 .stats-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
 .stat-tile{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center}
 .stat-icon{font-size:18px;display:block;margin-bottom:4px}
-.stat-val{font-family:var(--fd);font-size:20px;font-weight:800;line-height:1}
+.stat-val{font-family:var(--fd);font-size:22px;font-weight:700;line-height:1}
 .stat-lbl{font-family:var(--fm);font-size:8px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
 .stat-sub{font-family:var(--fm);font-size:8px;margin-top:2px;color:var(--muted)}
 .steps-row{display:flex;align-items:center;gap:20px;padding:16px 20px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:14px}
 .steps-info{flex:1;min-width:0}
-.steps-big{font-family:var(--fd);font-size:32px;font-weight:800;line-height:1}
+.steps-big{font-family:var(--fd);font-size:36px;font-weight:700;line-height:1}
 .steps-sub{font-family:var(--fm);font-size:10px;color:var(--muted);margin-top:3px}
 .workout-strip{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:14px}
 .workout-item-mini{display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--bg3);border-radius:var(--r-sm);font-size:12px;cursor:pointer;transition:all .15s}
@@ -279,8 +279,18 @@ main{margin-top:54px;padding:20px;max-width:1440px;margin-left:auto;margin-right
 <!-- HOME -->
 <div id="pg-home" class="page active">
   <div class="sh">
-    <div><div class="st" id="hGreet">Good morning, Weilie 👋</div><div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.06em;margin-top:2px" id="hDate"></div></div>
-    <div id="hWeek" class="tag tb">WEEK —</div>
+    <div><div class="st" id="hGreet">Good morning, Weilie 👋</div><div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.04em;margin-top:2px" id="hDate"></div></div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <div id="hWeek" class="tag tb">WEEK —</div>
+    </div>
+  </div>
+  <!-- Home date selector -->
+  <div class="date-bar">
+    <span class="date-lbl">Viewing:</span>
+    <button class="date-btn active" onclick="setHomeDate('today',this)">Today</button>
+    <button class="date-btn" onclick="setHomeDate('yesterday',this)">Yesterday</button>
+    <button class="date-btn" onclick="setHomeDate('7d',this)">7 Days Ago</button>
+    <input type="date" class="date-input" id="homeDatePicker" onchange="setHomeDateCustom(this.value)" title="Pick a date">
   </div>
 
   <!-- Recovery hero -->
@@ -305,11 +315,28 @@ main{margin-top:54px;padding:20px;max-width:1440px;margin-left:auto;margin-right
   </div>
 
   <!-- 4 metrics -->
-  <div class="metric-row">
-    <div class="metric-tile"><span class="metric-icon">⚡</span><div class="metric-val" id="mBB">—</div><div class="metric-lbl">Body Battery</div><div class="pb mt12"><div class="pf" id="mBBbar" style="width:0"></div></div></div>
-    <div class="metric-tile"><span class="metric-icon">😴</span><div class="metric-val" id="mSleep">—</div><div class="metric-lbl">Sleep Score</div><div class="pb mt12"><div class="pf" id="mSleepbar" style="width:0"></div></div></div>
-    <div class="metric-tile"><span class="metric-icon">💓</span><div class="metric-val" id="mHRV">—</div><div class="metric-lbl">HRV (ms)</div><div class="pb mt12"><div class="pf b" id="mHRVbar" style="width:0"></div></div></div>
-    <div class="metric-tile"><span class="metric-icon">🧘</span><div class="metric-val" id="mStress">—</div><div class="metric-lbl">Stress</div><div class="pb mt12"><div class="pf y" id="mStressbar" style="width:0"></div></div></div>
+  <!-- Metrics + Steps in one row -->
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px">
+    <div class="metric-tile"><span class="metric-icon">⚡</span><div class="metric-val" id="mBB">—</div><div class="metric-lbl">Body Battery</div><div style="font-family:var(--fm);font-size:9px;color:var(--green);margin-top:2px">30% weight</div><div class="pb mt12"><div class="pf" id="mBBbar" style="width:0"></div></div></div>
+    <div class="metric-tile"><span class="metric-icon">😴</span><div class="metric-val" id="mSleep">—</div><div class="metric-lbl">Sleep Score</div><div style="font-family:var(--fm);font-size:9px;color:var(--blue);margin-top:2px">25% weight</div><div class="pb mt12"><div class="pf" id="mSleepbar" style="width:0"></div></div></div>
+    <div class="metric-tile"><span class="metric-icon">💓</span><div class="metric-val" id="mHRV">—</div><div class="metric-lbl">HRV (ms)</div><div style="font-family:var(--fm);font-size:9px;color:var(--blue);margin-top:2px">25% weight</div><div class="pb mt12"><div class="pf b" id="mHRVbar" style="width:0"></div></div></div>
+    <div class="metric-tile"><span class="metric-icon">🧘</span><div class="metric-val" id="mStress">—</div><div class="metric-lbl">Stress</div><div style="font-family:var(--fm);font-size:9px;color:var(--yellow);margin-top:2px">20% weight</div><div class="pb mt12"><div class="pf y" id="mStressbar" style="width:0"></div></div></div>
+    <!-- Steps tile inline -->
+    <div class="metric-tile" style="position:relative">
+      <div style="display:flex;align-items:center;justify-content:center;margin-bottom:4px">
+        <svg width="54" height="54" viewBox="0 0 54 54">
+          <circle cx="27" cy="27" r="22" fill="none" stroke="var(--bg3)" stroke-width="5"/>
+          <circle id="stepsRing" cx="27" cy="27" r="22" fill="none" stroke="var(--yellow)" stroke-width="5"
+            stroke-dasharray="138" stroke-dashoffset="138" stroke-linecap="round"
+            style="transform:rotate(-90deg);transform-origin:27px 27px;transition:stroke-dashoffset 1.5s ease,stroke .5s"/>
+        </svg>
+        <span style="position:absolute;font-size:11px;font-family:var(--fm);color:var(--yellow)">👣</span>
+      </div>
+      <div class="metric-val" id="stBig" style="font-size:20px">—</div>
+      <div class="metric-lbl">Steps</div>
+      <div style="font-family:var(--fm);font-size:9px;color:var(--muted);margin-top:2px">Goal: <span id="stGoal">8,000</span></div>
+      <div style="margin-top:4px" id="stTag"></div>
+    </div>
   </div>
 
   <!-- Body stats -->
@@ -325,22 +352,10 @@ main{margin-top:54px;padding:20px;max-width:1440px;margin-left:auto;margin-right
     <div class="stat-tile"><span class="stat-icon">🧬</span><div class="stat-val" id="sBMR">—</div><div class="stat-lbl">BMR kcal</div><div class="stat-sub">age: <span id="sAge">—</span></div></div>
   </div>
 
-  <!-- Steps -->
-  <div class="steps-row">
-    <div class="ring-wrap">
-      <svg width="76" height="76" viewBox="0 0 76 76">
-        <circle cx="38" cy="38" r="31" fill="none" stroke="var(--bg3)" stroke-width="7"/>
-        <circle id="stepsRing" cx="38" cy="38" r="31" fill="none" stroke="var(--yellow)" stroke-width="7"
-          stroke-dasharray="195" stroke-dashoffset="195" stroke-linecap="round"
-          style="transform:rotate(-90deg);transform-origin:38px 38px;transition:stroke-dashoffset 1.5s ease,stroke .5s"/>
-      </svg>
-      <div class="ring-val"><div class="ring-lbl" style="font-size:7px">STEPS</div></div>
-    </div>
-    <div class="steps-info">
-      <div class="steps-big" id="stBig">—</div>
-      <div class="steps-sub">Goal: <span id="stGoal">8,000</span> · <span id="stDist">—</span> · <span id="stCal">—</span> cal</div>
-      <div style="margin-top:7px" id="stTag"></div>
-    </div>
+  <!-- Steps sub-info (dist + cal) -->
+  <div style="display:flex;gap:16px;margin-bottom:14px;padding:10px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);font-family:var(--fm);font-size:11px;color:var(--muted)">
+    <span>📍 Distance: <b style="color:var(--text)" id="stDist">—</b></span>
+    <span>🔥 Calories: <b style="color:var(--text)" id="stCal">—</b></span>
   </div>
 
   <!-- Today's workout mini -->

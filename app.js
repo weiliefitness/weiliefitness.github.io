@@ -85,7 +85,13 @@ async function loadHome() {
   const wk = Math.ceil(((now-new Date(now.getFullYear(),0,1))/86400000+1)/7);
   set('hWeek', `WEEK ${wk}`);
 
-  const latest = await getLatestHealth();
+  // Get data for selected date or latest
+  const allData = await getDailyHealth();
+  let latest = allData[allData.length-1] || null;
+  if (_homeDate && allData.length) {
+    const match = allData.find(r => (r['Date']||'').toString().startsWith(_homeDate));
+    if (match) latest = match;
+  }
   const score  = calcRecoveryScore(latest);
   const px     = buildPrescription(score, latest);
 
@@ -100,6 +106,9 @@ async function loadHome() {
   set('recTitle', px.label);
   set('recReason', px.reason);
   set('recTag', `<span class="tag ${px.cls}">${px.tag}</span>`, true);
+  // Update date picker to reflect selected date
+  const dp = $('homeDatePicker');
+  if (dp && _homeDate) dp.value = _homeDate;
 
   if (latest) {
     const bb=latest['Body Battery (AM)'], sl=latest['Sleep Score'];
@@ -133,7 +142,7 @@ async function loadHome() {
     set('stTag', stTag, true);
     const stRing = $('stepsRing');
     if (stRing) {
-      stRing.style.strokeDashoffset = 195 - (195*Math.min(steps/goal,1));
+      stRing.style.strokeDashoffset = 138 - (138*Math.min(steps/goal,1));
       stRing.style.stroke = sc;
     }
   }
@@ -180,6 +189,22 @@ function renderHomeWorkout(px) {
   setw('homeExProgressBar', exercises.length ? (doneCount/exercises.length)*100 : 0);
 }
 
+
+// ---- HOME DATE SELECTOR ----
+let _homeDate = null; // null = latest
+
+async function setHomeDate(mode, btn) {
+  activateDateBtn(btn);
+  if (mode === 'today')     _homeDate = null;
+  else if (mode === 'yesterday') _homeDate = getDateNDaysAgo(1);
+  else if (mode === '7d')   _homeDate = getDateNDaysAgo(7);
+  await loadHome();
+}
+async function setHomeDateCustom(val) {
+  document.querySelectorAll('#pg-home .date-btn').forEach(b=>b.classList.remove('active'));
+  _homeDate = val;
+  await loadHome();
+}
 function renderNutritionHome(t) {
   set('hCal', t.cal.toLocaleString());
   set('hProt', t.protein);
